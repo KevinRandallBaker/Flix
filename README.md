@@ -26,4 +26,5 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="YOUR_GIF_URL_HERE" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+Overall building the table and cells was really straightforward and easy and gives me a starting recipe for future apps.
+This project only really became complicated with the addition of pods. 
