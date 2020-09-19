@@ -77,4 +77,23 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         return cell
     }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        print("Loading grid details screen...")
+        
+        // Find selected movie
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        // Pass the selected movie to the grid details view controller
+        let gridDetailsController = segue.destination as! GridDetailsController
+        
+        gridDetailsController.movie = movie
+        
+        // Keeping this here just incase it comes up. Doesnt seem to have the same sticky
+        //  selection properties that tableView has.
+        //collectionView.deselectItem(at: indexPath, animated: true)
+    }
 }
